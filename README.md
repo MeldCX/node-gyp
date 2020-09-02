@@ -237,6 +237,15 @@ $ npm config set [--global] devdir /tmp/.gyp
 **Note:** Configuration set via `npm` will only be used when `node-gyp`
 is run via `npm`, not when `node-gyp` is run directly.
 
+### Windows Native Module with Shared NodeJS Library
+
+To configure node-gyp to compile with `libnode.lib` rather than `node.exe` used when NodeJS has been compiled as a shared library, set the following environment variables:
+
+```
+set NODE_AS_SHARED_LIB=1
+set NODE_LIB_PATH=C:\path\to\node\lib\libnode.lib
+```
+
 ## License
 
 `node-gyp` is available under the MIT license. See the [LICENSE
